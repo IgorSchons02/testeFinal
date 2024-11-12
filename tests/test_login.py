@@ -1,13 +1,15 @@
 # test_login.py
-from selenium import webdriver
+#from selenium import webdriver
 import time
-#from driver_setup import get_driver  # Importando a função get_driver
+from driver_setup import get_driver  # Importando a função get_driver
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome() 
-driver.get('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login') 
-driver.maximize_window()
+# driver = webdriver.Chrome() 
+# driver.get('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login') 
+# driver.maximize_window()
 
+driver = get_driver()
+driver.get("https://opensource-demo.orangehrmlive.com/")
 
 # Simular ações no OrangeHRM
 time.sleep(1)
