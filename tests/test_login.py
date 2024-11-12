@@ -7,8 +7,8 @@ def test_login():
     driver.get("https://opensource-demo.orangehrmlive.com/")
 
     # Simular ações no OrangeHRM
-    driver.find_element(By.NAME, "username").send_keys("Admin")
-    driver.find_element(By.NAME, "password").send_keys("admin123")
+    driver.find_element(By.XPATH, "//a[text()='Username']").send_keys("Admin")
+    driver.find_element(By.XPATH, "//a[text()='passowrd']").send_keys("admin123")
     driver.find_element(By.ID, "btnLogin").click()
     
     assert "dashboard" in driver.current_url
