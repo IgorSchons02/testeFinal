@@ -231,7 +231,7 @@ def test_postarVideo():
     time.sleep(2)
     driver.find_element(By.XPATH, "//button[text()=' Share Video']").click() 
     time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div/div/form/div[2]/div[2]/textarea").send_keys("https://www.youtube.com/watch?v=3_upA09AntU")
+    driver.find_element(By.CSS_SELECTOR, ".oxd-textarea").send_keys("https://www.youtube.com/watch?v=3_upA09AntU")
 
     time.sleep(1)
     driver.find_element(By.XPATH, "//button[text()=' Share ']").click()
