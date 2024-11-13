@@ -21,20 +21,15 @@ def test_user():
     time.sleep(10)
     driver.find_element(By.XPATH, "//button[text()=' Add ']").click()
 
-    WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//input[contains(@placeholder,'First Name')]"))
-    ).send_keys("teste")
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//input[contains(@placeholder,'First Name')]").send_keys("#$@%#")
+    
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//input[contains(@placeholder,'Middle Name')]").send_keys("teste")
 
-    WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//input[contains(@placeholder,'Middle Name')]"))
-    ).send_keys("teste")
-
-    WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//input[contains(@placeholder,'Last Name')]"))
-    ).send_keys("teste")
-
-    driver.find_element(By.CLASS_NAME, "oxd-input.oxd-input--focus").send_keys("@%#%#@$")
-
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//input[contains(@placeholder,'Last Name')]").send_keys("teste")
+    
     assert "empNumber" in driver.current_url
     driver.quit()
 
