@@ -172,6 +172,7 @@ def test_workexperience():
     driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/pim/viewMyDetails']").click()
     time.sleep(2)
     driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[9]/a").click()
+    time.sleep(2)
     driver.find_element(By.XPATH, "//button[text()=' Add ']").click()
 
     time.sleep(2)
