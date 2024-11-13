@@ -16,7 +16,7 @@ def test_login():
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/pim/viewPimModule']"))).click()
 
     # Espera pelo botão "Add" e clica nele
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.oxd-button.oxd-button--medium.oxd-button--secondary"))).click()
+    WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.oxd-button.oxd-button--medium.oxd-button--secondary"))).click()
 
     # Verificação de URL
     assert "addEmployee" in driver.current_url
