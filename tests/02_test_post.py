@@ -3,7 +3,7 @@ from driver_setup import get_driver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-def test_user():
+def test_post():
     driver = get_driver()
     driver.get("https://opensource-demo.orangehrmlive.com/")
 
