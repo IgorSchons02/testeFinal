@@ -33,7 +33,7 @@ def test_user():
         EC.presence_of_element_located((By.XPATH, "//input[contains(@placeholder,'Last Name')]"))
     ).send_keys("teste")
 
-    driver.find_element(By.CSS_SELECTOR, "oxd-input oxd-input--focus").send_keys("@%#%#@$")
+    driver.find_element(By.CSS_SELECTOR, "oxd-input.oxd-input--focus").send_keys("@%#%#@$")
 
     assert "empNumber" in driver.current_url
     driver.quit()
