@@ -95,7 +95,7 @@ def test_repost():
     time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/buzz/viewBuzz']").click()
     time.sleep(2)
-    driver.find_element(By.XPATH, """"/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[3]/div[1]/button[2]/i""").click()
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[3]/div[1]/button[2]/i").click()
     time.sleep(2)
     driver.find_element(By.XPATH, "//button[text()=' Share ']").click()
 
