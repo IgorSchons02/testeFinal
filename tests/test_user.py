@@ -50,7 +50,7 @@ def test_post():
     time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/buzz/viewBuzz']").click()
     time.sleep(10)
-    driver.find_element(By.XPATH, "//input[contains(@placeholder,\"What's on your mind?\")]").send_keys("teste post")
+    driver.find_element(By.XPATH, "//input[contains(@placeholder, concat('What', \"'\", 's on your mind?'))]").send_keys("teste post")
     time.sleep(1)
     driver.find_element(By.XPATH, "//button[text()=' Post ']").click()
 
