@@ -36,7 +36,7 @@ def test_user():
     input_field = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//input[@class='oxd-input oxd-input--focus']"))
     )
-    input_field.send_keys("#%$@%%$$#@s")
+    input_field.send_keys("#%$@%%$$#@")
 
     assert "empNumber" in driver.current_url
     driver.quit()
