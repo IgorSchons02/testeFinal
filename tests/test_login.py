@@ -29,6 +29,9 @@ def test_user():
 
     time.sleep(2)
     driver.find_element(By.XPATH, "//input[contains(@placeholder,'Last Name')]").send_keys("teste")
+
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//button[text()=' Save ']").click()
     
     assert "empNumber" in driver.current_url
     driver.quit()
