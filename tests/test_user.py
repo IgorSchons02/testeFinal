@@ -254,7 +254,7 @@ def test_deletarPost():
     time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/buzz/viewBuzz']").click()
     time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/li/button/i").click()
+    driver.find_element(By.CSS_SELECTOR, ".oxd-grid-1 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > li:nth-child(1) > button:nth-child(1)").click()
     time.sleep(2)
     driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/li/ul/li[1]/p").click()
     time.sleep(2)
