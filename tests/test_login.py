@@ -1,4 +1,3 @@
-# test_login.py
 #from selenium import webdriver
 import time
 from driver_setup import get_driver  # Importando a função get_driver
