@@ -282,7 +282,7 @@ def test_criarUserCaracter():
     time.sleep(2)
     driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]/i").click()
     time.sleep(2)
-    driver.find_element(By.XPATH, "//button[text()=' Admin']").click()
+    driver.find_element(By.XPATH, "//button[text()='Admin ']").click()
     time.sleep(2)
     driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input").send_keys("Orange  Test")
     time.sleep(2)
