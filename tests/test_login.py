@@ -1,6 +1,8 @@
 import time
 from driver_setup import get_driver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 def test_login():
     driver = get_driver()
@@ -15,8 +17,8 @@ def test_login():
     driver.find_element(By.XPATH, "//button[text()=' Login ']").click()
     time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/pim/viewPimModule']").click()
-    time.sleep(6)
-    driver.find_element(By.CSS_SELECTOR, "button.oxd-button.oxd-button--medium.oxd-button--secondary").click()
+    
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.oxd-button.oxd-button--medium.oxd-button--secondary"))).click()
 
     assert "addEmployee" in driver.current_url
     driver.quit()
