@@ -98,6 +98,18 @@ def test_repost():
     driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[3]/div[1]/button[2]/i").click()
     time.sleep(2)
     driver.find_element(By.XPATH, "//button[text()=' Share ']").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[3]/div[1]/button[2]/i").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//button[text()=' Share ']").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[3]/div[1]/button[2]/i").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//button[text()=' Share ']").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[3]/div[1]/button[2]/i").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//button[text()=' Share ']").click()
 
     driver.find_element(By.ID, 'oxd-toaster_1') #id da confirmação
     driver.quit()
