@@ -256,9 +256,9 @@ def test_deletarPost():
     time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, ".oxd-grid-1 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > li:nth-child(1) > button:nth-child(1)").click()
     time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/li/ul/li[1]/p").click()
+    driver.find_element(By.CSS_SELECTOR, "li.orangehrm-buzz-post-header-config-item:nth-child(1) > p:nth-child(2)").click()
     time.sleep(2)
-    driver.find_element(By.XPATH, "//button[text()=' Yes, Delete ']").click()
+    driver.find_element(By.CSS_SELECTOR, ".oxd-button--label-danger").click()
 
     driver.find_element(By.ID, 'oxd-toaster_1') #id da confirmação
     driver.quit()
