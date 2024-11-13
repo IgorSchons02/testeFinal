@@ -12,7 +12,7 @@ jobs:
 
     services:
       selenium:
-        image: selenium/standalone-chrome
+        image: selenium/firefox
         ports:
           - 4444:4444
 
