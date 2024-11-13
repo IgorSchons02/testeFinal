@@ -15,7 +15,7 @@ def test_login():
     driver.find_element(By.XPATH, "//button[text()=' Login ']").click()
     time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/pim/viewPimModule']").click()
-    time.sleep(2)
+    time.sleep(6)
     driver.find_element(By.CSS_SELECTOR, "button.oxd-button.oxd-button--medium.oxd-button--secondary").click()
 
     assert "addEmployee" in driver.current_url
