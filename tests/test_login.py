@@ -19,6 +19,8 @@ def test_login():
     button_add = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "button.oxd-button.oxd-button--medium.oxd-button--secondary")))
     driver.execute_script("arguments[0].click();", button_add)
 
+    WebDriverWait(driver, 30).until(EC.url_contains("addEmployee"))
+
     # Verificação de URL
     assert "addEmployee" in driver.current_url
     driver.quit()
