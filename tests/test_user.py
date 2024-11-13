@@ -207,7 +207,7 @@ def test_userOk():
     driver.find_element(By.XPATH, "//input[contains(@placeholder,'Middle Name')]").send_keys("teste")
 
     time.sleep(2)
-    driver.find_element(By.XPATH, "//input[contains(@placeholder,'Last Name')]").send_keys("teste")
+    driver.find_element(By.XPATH, "//input[contains(@placeholder,'Last Name')]").send_keys("tste")
 
     time.sleep(2)
     driver.find_element(By.XPATH, "//button[text()=' Save ']").click()
