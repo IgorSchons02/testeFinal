@@ -263,7 +263,7 @@ from selenium.common.exceptions import NoSuchElementException
 #     driver.find_element(By.ID, 'oxd-toaster_1') #id da confirmação
 #     driver.quit()
 
-def test_criarUserCaracter():
+def test_funcionarioSemId():
     driver = get_driver()
     driver.get("https://opensource-demo.orangehrmlive.com/")
 
@@ -276,29 +276,27 @@ def test_criarUserCaracter():
     driver.find_element(By.XPATH, "//button[text()=' Login ']").click()
 
     time.sleep(2)
-    driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/admin/viewAdminModule']").click()
+    driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/pim/viewPimModule']").click()
+    time.sleep(10)
+    driver.find_element(By.XPATH, "//button[text()=' Add ']").click()
+
     time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[1]/button").click()
+    driver.find_element(By.XPATH, "//input[contains(@placeholder,'First Name')]").send_keys("testeteste")
+    
     time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]/i").click()
+    driver.find_element(By.XPATH, "//input[contains(@placeholder,'Middle Name')]").send_keys("teste")
+
     time.sleep(2)
-    driver.find_element(By.XPATH, "//button[text()='Admin']").click()
+    driver.find_element(By.XPATH, "//input[contains(@placeholder,'Last Name')]").send_keys("teste")
+
     time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input").send_keys("Orange  Test")
-    time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[3]/div/div[2]/div/div/div[2]/i").click()
-    time.sleep(2)
-    driver.find_element(By.XPATH, "//button[text()='Enabled']").click()
-    time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[4]/div/div[2]/input").send_keys("@$#%@#$")
-    time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input").send_keys("OrangeUser1")
-    time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input").send_keys("OrangeUser1")
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input").clear()
+
     time.sleep(2)
     driver.find_element(By.XPATH, "//button[text()=' Save ']").click()
-
-    driver.find_element(By.ID, 'oxd-toaster_1') #id da confirmação
+    time.sleep(5)
+    assert "empNumber" in driver.current_url
     driver.quit()
+
 
 
