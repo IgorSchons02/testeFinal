@@ -316,10 +316,11 @@ def test_deletUser():
     driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[6]/div/button[1]").click()
 
     time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div[3]/div/div/div/div[3]/button[2]").click()
+    driver.find_element(By.CSS_SELECTOR, ".oxd-button--label-danger").click()
 
     driver.find_element(By.ID, 'oxd-toaster_1') #id da confirmação
     driver.quit()
+    
     
     
 
