@@ -294,7 +294,7 @@ def test_funcionarioSemId():
 
     time.sleep(2)
     driver.find_element(By.XPATH, "//button[text()=' Save ']").click()
-    time.sleep(5)
+    time.sleep(15)
     assert "empNumber" in driver.current_url
     driver.quit()
 
