@@ -312,9 +312,16 @@ def test_deletUser():
 
     time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/admin/viewAdminModule']").click()
+    
+    time.sleep(5)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[1]/div/div[3]/div/i").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[1]/div/div[3]/div/i").click()
+    time.sleep(3)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[1]/div/div[3]/div/div/ul/li[2]/span").click()
+
     time.sleep(5)
     driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[6]/div/button[1]").click()
-
     time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, ".oxd-button--label-danger").click()
 
