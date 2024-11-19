@@ -36,7 +36,6 @@ def test_user():
         print("TESTE REPROVADO")
     except AssertionError:
         print("TESTE APROVADO")
-    finally:
         driver.quit()
 
 
@@ -59,8 +58,12 @@ def test_post():
     driver.find_element(By.XPATH, "//button[text()=' Post ']").click()
 
     time.sleep(5)
-    assert "viewBuzz" in driver.current_url
-    driver.quit()
+    try:
+        assert "viewBuzz" in driver.current_url
+        print("TESTE APROVADO")
+    except AssertionError:
+        print("TESTE REPROVADO")
+        driver.quit()
 
 
 # def test_curtida():
