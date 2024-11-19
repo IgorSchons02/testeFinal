@@ -31,8 +31,6 @@ def test_user():
     time.sleep(2)
     driver.find_element(By.XPATH, "//button[text()=' Save ']").click()
     time.sleep(5)
-    assert "empNumber" in driver.current_url
-    driver.quit()
     try:
         assert "empNumber" in driver.current_url
         print("TESTE REPROVADO")
