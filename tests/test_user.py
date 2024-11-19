@@ -31,11 +31,14 @@ def test_user():
     time.sleep(2)
     driver.find_element(By.XPATH, "//button[text()=' Save ']").click()
     time.sleep(5)
+    assert "empNumber" in driver.current_url
+    driver.quit()
     try:
         assert "empNumber" in driver.current_url
         print("TESTE REPROVADO")
     except AssertionError:
         print("TESTE APROVADO")
+    finally:
         driver.quit()
 
 
@@ -58,12 +61,8 @@ def test_post():
     driver.find_element(By.XPATH, "//button[text()=' Post ']").click()
 
     time.sleep(5)
-    try:
-        assert "viewBuzz" in driver.current_url
-        print("TESTE APROVADO")
-    except AssertionError:
-        print("TESTE REPROVADO")
-        driver.quit()
+    assert "viewBuzz" in driver.current_url
+    driver.quit()
 
 
 # def test_curtida():
