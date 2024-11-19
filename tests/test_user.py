@@ -363,3 +363,33 @@ def test_addJob():
     driver.quit()
 
 
+def test_EmergencyContact():
+    driver = get_driver()
+    driver.get("https://opensource-demo.orangehrmlive.com/")
+
+    #login
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//input[contains(@placeholder,'Username')]").send_keys("Admin")
+    time.sleep(1)
+    driver.find_element(By.XPATH, "//input[contains(@placeholder,'Password')]").send_keys("admin123")
+    time.sleep(1)
+    driver.find_element(By.XPATH, "//button[text()=' Login ']").click()
+
+    time.sleep(2)
+    driver.find_element(By.CSS_SELECTOR, "a.oxd-main-menu-item[href='/web/index.php/pim/viewMyDetails']").click()
+    
+    time.sleep(5)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[3]/a").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/div/button").click()
+    time.sleep(3)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[1]/div/div[2]/input").send_keys("teste teste")
+    time.sleep(1)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[2]/div/div[2]/input").send_keys("teste teste")
+    time.sleep(1)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[2]/div/div[1]/div/div[2]/input").send_keys("5")
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[3]/button[2]").click()
+    
+    driver.find_element(By.ID, 'oxd-toaster_1') #id da confirmação
+    driver.quit()
