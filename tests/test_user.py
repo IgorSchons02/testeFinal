@@ -32,14 +32,9 @@ def test_user():
     driver.find_element(By.XPATH, "//button[text()=' Save ']").click()
     time.sleep(5)
     assert "empNumber" in driver.current_url
+    time.sleep(5)
     driver.quit()
-    try:
-        assert "empNumber" in driver.current_url
-        print("TESTE REPROVADO")
-    except AssertionError:
-        print("TESTE APROVADO")
-    finally:
-        driver.quit()
+
 
 
 def test_post():
@@ -62,6 +57,7 @@ def test_post():
 
     time.sleep(5)
     assert "viewBuzz" in driver.current_url
+    time.sleep(5)
     driver.quit()
 
 
