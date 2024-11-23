@@ -428,5 +428,5 @@ def test_idInfinito():
     time.sleep(4)
     driver.find_element(By.XPATH, "//button[text()=' Save ']").click()
     time.sleep(15)
-    assert "empNumber" in driver.current_url
+    assert "addEmployee" in driver.current_url
     driver.quit()#
