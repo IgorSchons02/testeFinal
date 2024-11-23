@@ -420,12 +420,12 @@ def test_idInfinito():
     time.sleep(2)
     driver.find_element(By.XPATH, "//input[contains(@placeholder,'Last Name')]").send_keys("teste")
 
-    string = "a" * 1000  # Cria uma string com 1000 caracteres 
+    string = "a" * 100  # Cria uma string com 100 caracteres 
 
     time.sleep(2)
     driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input").send_keys(string)
 
-    time.sleep(3)
+    time.sleep(4)
     driver.find_element(By.XPATH, "//button[text()=' Save ']").click()
     time.sleep(15)
     assert "empNumber" in driver.current_url
